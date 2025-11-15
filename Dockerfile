@@ -1,0 +1,5 @@
+FROM eclipse-temurin:latest
+
+COPY target/openfeigndemo-0.0.1-SNAPSHOT.jar /demo.jar
+
+CMD ["java", "-jar", "/demo.jar"]
