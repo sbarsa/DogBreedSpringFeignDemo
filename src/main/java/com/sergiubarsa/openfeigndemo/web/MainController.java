@@ -26,6 +26,6 @@ public class MainController {
             <h3>Original URL: %s</h3>
           </body>
         </html>""".formatted(
-        randomDog.imageUrl(), randomDog.breed().orElse("Breed unknown"), randomDog.imageUrl());
+        randomDog.imageUrl(), randomDog.breed(), randomDog.imageUrl());
   }
 }

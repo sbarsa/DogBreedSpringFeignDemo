@@ -29,7 +29,7 @@ class MainControllerTest {
 
     @Test
     void testMainPage() {
-        Dog mockDog = new Dog("https://example.com/dog.jpg", Optional.of("Labrador"));
+        Dog mockDog = new Dog("https://example.com/dog.jpg", "Labrador");
         when(dogBreedService.getRandomDog()).thenReturn(mockDog);
 
         MvcTestResult response = mvc.get().uri("/").exchange();

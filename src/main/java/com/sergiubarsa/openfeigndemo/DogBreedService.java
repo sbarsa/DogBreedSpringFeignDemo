@@ -22,14 +22,14 @@ public class DogBreedService {
     return new Dog(url, extractBreed(url));
   }
 
-  private Optional<String> extractBreed(String url) {
+  private String extractBreed(String url) {
     URI uri = URI.create(url);
     String[] segments = uri.getPath().split("/");
     for (int i = 0; i < segments.length; i++) {
       if ("breeds".equals(segments[i]) && i + 1 < segments.length) {
-        return Optional.of(segments[i + 1]);
+        return segments[i + 1];
       }
     }
-    return Optional.empty();
+    return "Breed unknown";
   }
 }
